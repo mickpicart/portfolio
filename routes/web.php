@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MentionsController;
+use App\Http\Controllers\PortfolioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +17,15 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [AccueilController::class, 'index']);
+Route::get('/', function () {return redirect()->route('accueil');});
+
+Route::get('/accueil', [AccueilController::class, 'index'])->name('accueil');
+
+Route::get('/accueil', [PortfolioController::class, 'index'])->name('accueil');
 
 Route::get('contact', [ContactController::class, 'contact']);
 Route::post('contact', [ContactController::class, 'confirm']);
 
-// Méthode fallback() en dernière position
-Route::fallback(function() {
-    return view('404'); // la vue 404.blade.php
- });
+Route::get('mentions', [MentionsController::class, 'index']);
+
+Route::fallback(function() {return view('404'); });

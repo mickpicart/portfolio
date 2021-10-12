@@ -10,25 +10,36 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="resources\img\TinyCloud.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="{{ url('accueil') }}">
+                <img src="{{URL::asset('/image/TinyCloud.png')}}" alt="" width="40" height="30" class="d-inline-block align-text-top">
+                TINY CLOUD
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-                    <a class="nav-link" href="{{ url('contact') }}">Contact</a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ url('accueil') }}">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url('contact') }}">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main>@yield('body')</main>
+    <main>
+        <br>@yield('body')<br>
+    </main>
 
     <footer class="mt-auto text-white-50 bg-dark">
-        <p><a href="{{ url('mentions') }}" class="text-white">Mentions légales</a></p>
+        <div class="container-fluid">
+            <p><a href="{{ url('mentions') }}" class="text-white">Mentions légales</a></p>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,7 +1,6 @@
-@extends('contact')
+@extends('accueil')
  
 @section('body')
-    <br>
     <div class="container">
         <div class="row card text-white bg-dark">
             <h4 class="card-header">Contactez-moi</h4>
