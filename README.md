@@ -3,8 +3,6 @@
 ### 1. Clone repository
 
 ### 2. Installation :
-a. Back-End (Laravel 8) :
-
   - Change to directory :
       ```
       cd back
