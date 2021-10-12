@@ -15,7 +15,8 @@
       ```
       cp .env.example .env
       ```
-  - Modify DB_* value in .env with your database config.
+  - Modify DB_* values in .env with your database config.
+  - Modify MAIL_* values in .env with your MailTrap config.
   - Generate application key:
       ```
       php artisan key:generate
