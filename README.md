@@ -24,11 +24,7 @@
       ```
       php artisan migrate
       ```
-  - Seed (create user credentials and websites list in DataBase) :
-      ```
-      php artisan db:seed
-      ```
-   
+  
    - Serve (the web server artisan is the PHP built-in web server, which is **not for use in any scenario other than development**) :
       ```
       php artisan serve
